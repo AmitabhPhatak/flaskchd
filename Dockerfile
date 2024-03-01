@@ -11,7 +11,8 @@ COPY . /app
 RUN pip3 install --trusted-host pypi.python.org -r requirements.txt
 
 # Make port 8050 available to the world outside this container
-EXPOSE 8080
+EXPOSE 8081/tcp
+ENV FLASK_PORT=8081
 
 # Define environment variable
 ENV NAME World
